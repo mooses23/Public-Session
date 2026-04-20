@@ -1,0 +1,903 @@
+You are a senior full-stack product engineer, product designer, systems architect, and ruthless startup executor.
+
+Your task is to build V1 of a web platform for collaborative human-made music creation.
+
+This product is NOT AI music.
+Do not add AI generation, AI suggestions, AI mastering, AI remixing, AI auto-tagging, AI music assistance, or “smart” creative features.
+No generative AI inputs anywhere in the music workflow.
+This platform must feel human, competitive, raw, musical, and community-driven.
+
+The concept:
+One seed song is posted by the creator.
+Users download the stems.
+Each round allows only one specific type of musical addition.
+A contributor uploads one single added musical layer as a “commit.”
+The community votes on commits.
+Winning commits are merged into the official version.
+The public can follow the song’s version history as it evolves.
+
+This should feel like:
+- GitHub for songs
+- remix culture with structure
+- public competition
+- “fight your way into the official track”
+
+This should NOT feel like:
+- a DAW (digital audio workstation)
+- a social network clone
+- an NFT/blockchain product
+- an AI music app
+- bloated SaaS
+- a vague “creator community”
+
+Build a focused, brutal MVP with discipline.
+
+==================================================
+1. PRIMARY GOAL
+==================================================
+
+Build a V1 product that proves these 4 things:
+
+1) users will submit commits
+2) users will vote on commits
+3) users will return for future rounds
+4) one song can become a public evolving event
+
+If the product does not support those four, it is failing.
+
+==================================================
+2. PRODUCT NAME / WORKING CONCEPT
+==================================================
+
+Use a temporary internal project name if needed, but architect the app around this core object model:
+
+- Song
+- Round
+- Commit
+- Vote
+- Merge
+- VersionHistory
+- Contributor
+
+We are building around one seed song first, but the architecture should support multiple songs later without rewriting the core.
+
+==================================================
+3. HARD PRODUCT RULES
+==================================================
+
+These are non-negotiable.
+
+- Human-created music only
+- No AI-generated or AI-assisted musical submissions
+- No AI upload options, no AI checkbox except maybe an internal flag in admin to enforce policy, but do not make AI part of UX
+- No full remix free-for-all in V1
+- No album workflow
+- No messaging
+- No in-browser DAW
+- No live collaboration
+- No marketplace
+- No royalty engine yet
+- No fancy gamification beyond votes, rankings, version history, and contributor credits
+- No mobile app
+- No blockchain
+- No tipping
+- No “social feed”
+- No overdesigned creator economy fluff
+
+V1 is a sharp knife:
+One song.
+Structured rounds.
+Single-layer submissions.
+Community voting.
+Admin merge.
+Public evolution.
+
+==================================================
+4. USER EXPERIENCE SUMMARY
+==================================================
+
+The public experience should be:
+
+- I land on a song challenge page
+- I hear the current official version
+- I see what round is open
+- I download stems
+- I upload my musical contribution if eligible
+- I listen to other commits
+- I vote
+- I watch which commits rise
+- I see what got merged
+- I follow the version history
+- I see who made it into the official song
+
+The emotional tone:
+- competitive
+- musical
+- serious
+- exciting
+- transparent
+- human-made
+
+Not corporate. Not robotic. Not “AI platform.”
+
+==================================================
+5. MVP FEATURE SET
+==================================================
+
+Build these pages and features only.
+
+A) Public landing page
+- clean explanation of concept
+- current featured song challenge
+- CTA buttons:
+  - Listen to current song
+  - Download stems
+  - Submit your layer
+  - Vote on commits
+- simple explanation of “How it works”
+- latest merged contributors
+- version evolution preview
+
+B) Song challenge page
+This is the main product page.
+Must include:
+- song title
+- cover image
+- creator name
+- short song description
+- current official version audio player
+- BPM (beats per minute)
+- key
+- time signature if needed
+- round status
+- round deadline
+- exact allowed submission type for current round
+- rules summary
+- buttons:
+  - download stems
+  - submit commit
+  - browse commits
+  - view version history
+
+C) Stem download page / section
+Must include:
+- available files for download
+- file descriptions
+- download all stems
+- technical requirements:
+  - sample rate guidance
+  - WAV preferred
+  - exact BPM
+  - exact start alignment
+  - key
+  - max length
+  - naming format
+- strict human-made policy text
+- originality + rights notice
+
+D) Submit commit page
+Must include:
+- auth required
+- song and round clearly shown
+- current allowed instrument type clearly shown
+- upload form fields:
+  - commit title
+  - display name or use profile name
+  - instrument type
+  - short note
+  - audio file upload
+  - optional social handle
+  - checkbox: I confirm this is my original human-created work
+  - checkbox: I grant platform usage rights according to terms
+- validation:
+  - one submission per user per round
+  - file type restrictions
+  - max size
+  - round must be open
+  - submission category must match round rules
+
+Important:
+In V1 do NOT ask for complex session files.
+One upload = one bounced audio stem.
+Optionally allow a second file upload for “preview in context” only if simple enough, but default system should support uploaded stem + playback over official base where feasible.
+
+E) Commit listing page
+Must include:
+- filter by round
+- sort by top / newest
+- each commit card shows:
+  - title
+  - contributor
+  - instrument type
+  - vote count
+  - upload date
+  - play button
+  - link to detail page
+
+F) Commit detail page
+This is very important.
+Must include:
+- commit title
+- contributor
+- round
+- vote score
+- playback of isolated stem
+- playback in context with base song if feasible
+- upvote/downvote or thumbs up/thumbs down
+- note from contributor
+- admin decision badge if selected / rejected / pending
+- clear “official merge candidate” feeling
+
+If technical complexity becomes a blocker, V1 can support:
+- isolated stem player
+- optional uploaded preview mix player
+But architect the page so “play in context” can be added cleanly.
+
+G) Voting system
+Keep it simple and strict:
+- logged-in users only
+- one vote per user per commit
+- upvote/downvote OR upvote only; pick one clean model and implement cleanly
+Recommendation: implement upvote only first for simplicity, and calculate rankings by vote count.
+If downvote is added, it must be carefully designed to avoid abuse.
+- prevent duplicate votes
+- round voting locks when round closes
+
+H) Admin dashboard
+Private admin-only dashboard for the creator/operator.
+Must include:
+- song management
+- round management
+- upload/update official version
+- submission review
+- vote overview
+- shortlist commits
+- mark commit as merged / rejected / pending
+- create new version history entry
+- update public current official version
+
+I) Version history page
+Public-facing and essential.
+Must include:
+- Version 0 = original seed song
+- later versions listed chronologically
+- version title
+- date
+- what changed
+- which contributor/commit got merged
+- current official version clearly marked
+- audio player per version if feasible
+
+This is one of the core differentiators.
+The song should feel like a living branch history.
+
+J) Contributor credits page
+Public-facing.
+Must include:
+- all merged contributors
+- profile name
+- contribution type
+- linked commit
+- version included in
+- optional handle/social link
+- clear distinction between submitted vs merged contributors
+
+==================================================
+6. PRODUCT LOGIC / GAME LOOP
+==================================================
+
+Implement this exact flow:
+
+STEP 1:
+Admin creates a seed song and uploads initial official mix and downloadable stems.
+
+STEP 2:
+Admin opens Round 1 and defines exactly one allowed submission type.
+Examples:
+- percussion only
+- lead guitar only
+- harmony vocals only
+- pad / texture only
+
+STEP 3:
+Contributors download stems and submit one audio layer.
+
+STEP 4:
+Public listens and votes.
+
+STEP 5:
+Round closes automatically at deadline.
+
+STEP 6:
+Admin reviews top commits and chooses one or more commits to merge.
+
+STEP 7:
+Admin uploads updated official version and publishes a version history entry.
+
+STEP 8:
+Next round opens.
+
+This loop must be clear in database design, UI, admin tools, and wording.
+
+==================================================
+7. DESIGN PRINCIPLES
+==================================================
+
+Design direction:
+- dark or neutral music-friendly aesthetic
+- elegant but restrained
+- modern
+- minimal
+- performance-focused
+- no silly AI gradients or fake futuristic nonsense
+- no clutter
+
+UX priorities:
+- make the current round obvious
+- make the allowed contribution obvious
+- make the submission path frictionless
+- make rankings visible
+- make version evolution satisfying
+- make credits feel meaningful
+
+This should feel like:
+“serious musicians competing for a place in the track”
+
+not:
+“casual content app for random noise”
+
+==================================================
+8. INFORMATION ARCHITECTURE
+==================================================
+
+Public routes:
+- /
+- /songs
+- /songs/[songId]
+- /songs/[songId]/download
+- /songs/[songId]/submit
+- /songs/[songId]/commits
+- /songs/[songId]/commits/[commitId]
+- /songs/[songId]/history
+- /songs/[songId]/credits
+- /login
+- /register
+- /profile
+
+Admin routes:
+- /admin
+- /admin/songs
+- /admin/songs/[songId]
+- /admin/rounds
+- /admin/commits
+- /admin/history
+- /admin/settings
+
+You may simplify route naming if needed, but keep structure clean.
+
+==================================================
+9. TECH STACK REQUIREMENTS
+==================================================
+
+Build this in a stack that is production-leaning and Vercel-friendly.
+
+Preferred stack:
+- Next.js
+- TypeScript
+- Tailwind CSS
+- shadcn/ui if useful, but keep design consistent
+- Supabase for database + auth + storage
+- PostgreSQL through Supabase
+- RLS (row level security) if reasonable, but do not let auth complexity kill MVP
+- Vercel deployment compatibility
+
+Important:
+This must not depend on Replit-specific runtime behavior.
+This should be buildable in Replit/Copilot but deployable outside of Replit.
+
+Use clean folder structure.
+Use environment variables properly.
+Avoid bloated abstractions.
+
+==================================================
+10. DATABASE SCHEMA
+==================================================
+
+Design a practical schema with migrations.
+
+Recommended tables:
+
+profiles
+- id
+- username
+- display_name
+- avatar_url
+- bio
+- social_handle
+- created_at
+
+songs
+- id
+- slug
+- title
+- description
+- cover_image_url
+- creator_name
+- bpm
+- musical_key
+- time_signature
+- status (draft / active / archived)
+- current_version_id nullable
+- created_at
+- updated_at
+
+song_files
+- id
+- song_id
+- file_type (official_mix / stem / click / preview / cover / other)
+- label
+- file_url
+- original_filename
+- created_at
+
+rounds
+- id
+- song_id
+- round_number
+- title
+- description
+- allowed_instrument_type
+- status (draft / open / closed / merged)
+- opens_at
+- closes_at
+- created_at
+- updated_at
+
+commits
+- id
+- song_id
+- round_id
+- contributor_id
+- title
+- note
+- instrument_type
+- audio_file_url
+- preview_mix_url nullable
+- status (pending / shortlisted / merged / rejected)
+- vote_count cached nullable
+- created_at
+- updated_at
+
+votes
+- id
+- commit_id
+- user_id
+- value
+- created_at
+Unique constraint:
+- one vote per user per commit
+
+versions
+- id
+- song_id
+- version_number
+- title
+- description
+- official_mix_url
+- is_current
+- created_at
+
+version_merges
+- id
+- version_id
+- commit_id
+- contributor_id
+- merge_note
+- created_at
+
+downloads_log optional
+- id
+- user_id nullable
+- song_id
+- file_id
+- created_at
+
+admin_actions optional but recommended
+- id
+- admin_user_id
+- action_type
+- target_type
+- target_id
+- metadata json
+- created_at
+
+terms_acceptance optional but smart
+- id
+- user_id
+- acceptance_type
+- accepted_at
+
+You may refine naming, but keep the model close to this.
+
+==================================================
+11. AUTH / PERMISSIONS
+==================================================
+
+Roles:
+- public visitor
+- authenticated user
+- admin
+
+Rules:
+- public can browse songs, commits, history, credits
+- authenticated users can vote and submit commits
+- admin can create songs, manage rounds, review commits, publish versions
+
+Keep auth simple.
+Do not overbuild role systems.
+
+==================================================
+12. STORAGE REQUIREMENTS
+==================================================
+
+Use Supabase Storage or equivalent for:
+- official mixes
+- stems
+- commit uploads
+- preview mixes
+- cover images
+
+Organize storage clearly:
+- songs/{songId}/official/
+- songs/{songId}/stems/
+- songs/{songId}/rounds/{roundId}/commits/
+- songs/{songId}/versions/
+
+Implement file validation:
+- accepted audio types
+- size limits
+- secure upload paths
+
+==================================================
+13. AUDIO HANDLING STRATEGY
+==================================================
+
+Be practical, not fancy.
+
+V1 audio strategy:
+- upload audio files
+- render via standard HTML5 audio players
+- waveform visualization optional only if easy
+- no browser-based multitrack editor
+- no audio manipulation engine required
+- no automatic stem alignment wizard
+- no AI analysis
+- no auto-mixing
+
+If feasible:
+Allow users to hear either:
+- isolated stem
+or
+- uploaded preview mix in context
+
+If implementing true layered playback is too heavy for V1, support:
+1. isolated commit playback
+2. optional contributor-submitted context preview
+
+But architect code so “play with base mix together” can be added later.
+
+==================================================
+14. SUBMISSION VALIDATION RULES
+==================================================
+
+Must enforce:
+- round is open
+- user authenticated
+- one submission per user per round
+- instrument type matches round
+- required rights confirmation checked
+- required human-made confirmation checked
+- allowed file format
+- max duration and/or size if needed
+
+Display clear error messages.
+Do not allow vague silent failure.
+
+==================================================
+15. TERMS / POLICY REQUIREMENTS
+==================================================
+
+Create basic but clear policy pages and submission language.
+
+Need:
+- Terms of Use
+- Submission Rules
+- Human-Created Music Policy
+- Rights & License Summary
+- Privacy Policy placeholder
+
+Submission rules must make clear:
+- contributor warrants originality
+- no AI-generated or AI-assisted music submissions allowed
+- platform/operator may review, reject, edit, or merge submission
+- submission does not guarantee selection
+- selected submissions may become part of official release
+- contributor grants usage rights as described in terms
+- abusive or fraudulent submissions can be removed
+
+Do not try to invent a full entertainment-law royalty engine in V1.
+Just create clear V1 terms structure and acceptance flow.
+
+==================================================
+16. ADMIN TOOLS REQUIRED
+==================================================
+
+Admin must be able to:
+
+Song management:
+- create song
+- edit song metadata
+- upload cover
+- upload official mix
+- upload stems
+
+Round management:
+- create round
+- define allowed instrument type
+- set open/close dates
+- open/close round manually if needed
+
+Commit moderation:
+- view all submissions
+- filter by song / round / status
+- listen to submissions
+- shortlist
+- reject
+- mark merged
+
+Version publishing:
+- create new version
+- upload new official mix
+- attach merged commits to version
+- set new current version
+- auto-update public song page
+
+Stats:
+- total submissions
+- total votes
+- top commits by round
+- top contributors
+
+Keep dashboard clean and highly usable.
+
+==================================================
+17. ANALYTICS / METRICS
+==================================================
+
+Implement lightweight analytics in app DB or with simple event capture.
+
+Track at minimum:
+- number of stem downloads
+- number of submissions
+- number of votes
+- submissions per round
+- votes per round
+- returning contributors by round
+- most-played commits
+
+These metrics matter because the business question is retention and engagement, not just code completeness.
+
+==================================================
+18. NON-GOALS / EXPLICITLY DO NOT BUILD
+==================================================
+
+Do not build:
+- AI music anything
+- browser recording studio
+- chat system
+- direct messaging
+- social feed
+- comments if they slow launch
+- playlist features
+- follower system unless trivial
+- token economy
+- crypto wallet support
+- streaming service integrations
+- royalty payment system
+- in-app mastering
+- in-app arrangement editor
+- automated moderation beyond simple file/type/rule checks
+
+If tempted, cut it.
+
+==================================================
+19. DELIVERY PHASES
+==================================================
+
+Build in this order.
+
+PHASE 1: Foundation
+- app scaffold
+- auth
+- database schema
+- storage setup
+- public layout
+- admin layout
+
+PHASE 2: Song core
+- song creation
+- song page
+- official mix player
+- stem downloads
+
+PHASE 3: Rounds and submissions
+- round creation
+- submission flow
+- commit list/detail pages
+- file validation
+
+PHASE 4: Voting
+- vote system
+- rankings
+- closed-round behavior
+
+PHASE 5: Merge and history
+- admin shortlist / merge workflow
+- version publishing
+- version history page
+- credits page
+
+PHASE 6: polish
+- UI cleanup
+- empty states
+- error handling
+- seed data
+- deployment readiness
+
+==================================================
+20. SEED DATA / DEMO CONTENT
+==================================================
+
+Create seed/demo data so the app looks real immediately.
+
+Seed:
+- one sample song
+- one current round
+- at least 5 mock commits
+- a few votes
+- one seed version entry
+- one merged contributor example if needed
+
+The product must not look empty.
+
+==================================================
+21. UI DETAILS THAT MATTER
+==================================================
+
+Please make these highly visible:
+- current round status badge
+- allowed instrument type badge
+- submission deadline
+- leaderboard section
+- current official version
+- version evolution timeline
+- merged contributor credits
+
+Submission call-to-action must be obvious.
+
+Voting interface must be frictionless.
+
+History page must feel satisfying, like seeing a song evolve commit by commit.
+
+==================================================
+22. COPY / WORDING GUIDELINES
+==================================================
+
+Use human, musical, competitive wording.
+
+Good language:
+- Submit your layer
+- Current round
+- Official version
+- Merged into version
+- Contribution type
+- Build the track
+- Selected commit
+- Evolving song
+- Human-made music only
+
+Avoid:
+- AI-sounding fluff
+- corporate SaaS jargon
+- generic creator economy clichés
+- “revolutionary”
+- “smart music platform”
+- “powered by AI”
+
+This must feel artisan, musical, and alive.
+
+==================================================
+23. CODE QUALITY RULES
+==================================================
+
+- clean TypeScript
+- reusable components where it helps
+- do not overabstract early
+- maintainable file structure
+- clear server/client boundaries
+- environment variables documented
+- strong form validation
+- meaningful loading and error states
+- no fake placeholder logic where real logic is easy
+
+Create README with:
+- project purpose
+- stack
+- setup
+- environment variables
+- local dev instructions
+- deployment instructions
+- schema summary
+- future roadmap
+
+==================================================
+24. REQUIRED OUTPUTS
+==================================================
+
+I want you to actually build the app, not just describe it.
+
+Deliver:
+1. full project scaffold
+2. database schema and migrations
+3. auth flow
+4. public pages
+5. admin pages
+6. upload/storage integration
+7. voting system
+8. version history system
+9. credits system
+10. README
+11. sample seed data
+12. deployment-ready code
+
+If something is too heavy for first pass, implement the cleanest working version and clearly mark TODOs.
+
+==================================================
+25. IMPORTANT PRODUCT PHILOSOPHY
+==================================================
+
+This startup lives or dies on emotional tension.
+
+The product must make users feel:
+- “my part might make it in”
+- “I want to beat the other submissions”
+- “I want people to hear my contribution”
+- “I want credit”
+- “I want to come back for the next round”
+
+If the product feels like a boring upload portal, it fails.
+
+If it feels like a public competition to become part of the official song, it works.
+
+==================================================
+26. FINAL INSTRUCTION
+==================================================
+
+Start building immediately.
+
+First:
+- define final stack choices
+- scaffold the app
+- create schema
+- implement auth
+- create core routes
+- wire storage
+- build one seeded song challenge end-to-end
+
+Then expand to voting, merge workflow, version history, and credits.
+
+Be disciplined.
+Do not add AI.
+Do not add fluff.
+Do not drift from the core loop.
+Build the sharpest V1 possible.

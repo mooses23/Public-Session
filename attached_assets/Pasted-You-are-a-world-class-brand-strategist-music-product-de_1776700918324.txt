@@ -1,0 +1,688 @@
+You are a world-class brand strategist, music product designer, UX director, and front-end creative lead.
+
+Your job is NOT to build backend logic here.
+Your job is to define and implement the branding, visual language, UX direction, and front-end feel for a human-made collaborative music platform that will be deployed on Vercel.
+
+This platform must NOT look like generic SaaS.
+It must NOT feel like a dashboard for invoices, CRM, AI tools, or “productivity.”
+It must feel like:
+- music
+- tension
+- identity
+- competition
+- curation
+- underground credibility
+- public contribution
+- genre-driven culture
+
+Important constraints:
+- deployment target is Vercel
+- design should be production-ready and performant
+- mobile responsiveness matters
+- architecture should support genre-based browsing from day one
+- do NOT build a TikTok/Twitter/X/YouTube Shorts clone now, but leave room in the design system and information architecture for a short-form discovery layer later
+
+This is a HUMAN music platform.
+No AI feel.
+No AI copy.
+No futuristic fake-neon robot nonsense.
+No “smart creator operating system.”
+No sterile B2B panels.
+
+The product should feel like:
+“serious musicians and fans gathering around evolving songs, by genre, competing to shape what becomes official.”
+
+==================================================
+1. BRAND CORE
+==================================================
+
+Define the brand around these principles:
+
+- Human-made
+- Musical merit
+- Competitive contribution
+- Genre identity
+- Public evolution
+- Credited participation
+- Curated progression
+- Raw but refined
+
+This brand should sit somewhere between:
+- an indie label
+- a high-end music magazine
+- a live session archive
+- a battle platform
+- a version-controlled creative lab
+
+But do NOT make it feel too niche, too punk, too gamer, or too corporate.
+
+The sweet spot:
+premium + musical + modern + culturally aware
+
+==================================================
+2. WHAT THIS SHOULD FEEL LIKE
+==================================================
+
+The emotional feel should be:
+
+- “I want to hear what’s rising”
+- “I want my contribution to make the cut”
+- “this genre page has a real scene”
+- “this song is evolving in public”
+- “I can tell humans built this for music people”
+
+The app must feel:
+- alive
+- rhythmic
+- editorial
+- intentional
+- structured
+- culturally tuned
+
+Not:
+- spreadsheet-y
+- startup boilerplate
+- app-template-ish
+- B2B admin-heavy
+- “creator economy” cringe
+- AI-generated aesthetics
+
+==================================================
+3. VISUAL POSITIONING
+==================================================
+
+Build a visual system that avoids generic SaaS conventions.
+
+DO NOT default to:
+- pastel gradients
+- soft abstract blobs
+- giant rounded cards everywhere
+- startup illustrations
+- floating 3D icons
+- generic dashboard sidebars with boring cards
+- lifeless white-label admin look
+
+DO lean into:
+- strong typography
+- editorial spacing
+- confident hierarchy
+- immersive audio/musical presentation
+- restrained but memorable color use
+- visual cues from music culture, liner notes, studio logs, charts, setlists, tracklists, version notes, and genre identity
+
+This should feel like a hybrid of:
+- music publication
+- premium artist platform
+- competitive creative arena
+- version history archive
+
+==================================================
+4. BRAND PERSONALITY
+==================================================
+
+The brand voice and visual identity should feel:
+
+- confident
+- selective
+- music-first
+- human
+- sharp
+- culturally literate
+- not try-hard
+
+Avoid sounding like:
+- a corporate product manager
+- a motivational poster
+- a “revolutionary platform”
+- a machine pretending to be creative
+
+Good language themes:
+- build the track
+- current round
+- official version
+- selected commit
+- merged into version
+- genre scene
+- rising contributions
+- human-made music only
+- hear what made the cut
+- shape the record
+- evolving song
+
+==================================================
+5. GENRE-BASED EXPERIENCE IS REQUIRED
+==================================================
+
+This platform must be split by genre from early on.
+
+Design the IA (information architecture) and browsing system so genre is a first-class part of the experience, not a tiny filter.
+
+Genres might include examples like:
+- indie
+- rock
+- folk
+- pop
+- alternative
+- hip-hop
+- electronic
+- ambient
+- singer-songwriter
+- r&b
+
+Do NOT hardcode these only; make the system extensible.
+
+Genre needs to influence:
+- navigation
+- discovery
+- song pages
+- visual accents if subtle
+- browsing context
+- cultural framing
+
+The product should eventually feel like:
+“each genre has its own lane, taste, and energy”
+
+Important:
+Do NOT make every genre look like a different entire app.
+Instead:
+- create a unified master brand
+- allow genre-aware accents, textures, imagery direction, microcopy tone, and curation style
+
+Think:
+one platform, multiple music neighborhoods
+
+==================================================
+6. HOMEPAGE DIRECTION
+==================================================
+
+The homepage should not just be “welcome to our platform.”
+
+It should immediately answer:
+- what is happening right now
+- what song is active
+- what genres are active
+- what contributions are rising
+- why this is exciting
+
+Homepage sections should feel editorial and alive.
+
+Recommended homepage structure:
+1. Hero section
+   - current featured song or challenge
+   - strong audio-first CTA
+   - one-line explanation
+   - buttons:
+     - hear the current version
+     - explore by genre
+     - submit your layer
+     - vote on commits
+
+2. Current rounds / live now
+   - active songs
+   - genre labels
+   - round status
+   - deadlines
+
+3. Explore by genre
+   - visually distinct genre tiles or bands
+   - each genre should feel like a scene entry point
+
+4. Rising commits
+   - top-voted contributions across genres or current featured genre
+
+5. Version evolution / how it works
+   - show that songs change over time
+   - this is a differentiator
+
+6. Latest merged contributors
+   - social proof
+   - people want to see that real names make it in
+
+7. Human-made music policy
+   - subtle but clear
+   - this matters to brand trust
+
+Do NOT make homepage feel like a static product marketing page.
+It should feel like a living music front page.
+
+==================================================
+7. SONG PAGE UX DIRECTION
+==================================================
+
+Song pages are the soul of the product.
+
+Each song page should feel like:
+- part release page
+- part contest page
+- part studio log
+- part evolving archive
+
+Required emphasis:
+- current official version at the top
+- genre visible
+- round visible
+- exact ask visible
+- tension visible
+- progression visible
+
+Core visual hierarchy:
+1. Song identity
+   - cover art
+   - title
+   - creator
+   - genre
+   - BPM / key / round info
+
+2. Current official version player
+   - this is the centerpiece
+
+3. Current round card
+   - what type of contribution is needed
+   - deadline
+   - status
+   - CTA to submit
+
+4. Rising commits / leaderboard preview
+
+5. Version history preview
+
+6. Credits / merged contributors
+
+It should feel like:
+“this song is a living document”
+
+==================================================
+8. GENRE PAGES
+==================================================
+
+Create dedicated genre pages or genre views.
+
+These should not just be filter dumps.
+Each genre page should feel curated.
+
+Genre page should include:
+- genre title
+- short scene intro or description
+- active songs in that genre
+- hottest commits in that genre
+- recently merged contributions
+- possibly visual mood cues unique to that genre
+
+Examples of subtle genre-specific differentiation:
+- imagery style
+- typography pairing adjustments
+- accent hues
+- artwork framing
+- spacing density
+- label language
+- editorial copy tone
+
+Again:
+do not create completely inconsistent styling.
+Keep one system with genre-aware flavor.
+
+==================================================
+9. DESIGN SYSTEM DIRECTION
+==================================================
+
+Build a reusable design system with:
+- typography scale
+- spacing rules
+- button system
+- badges
+- cards
+- audio modules
+- leaderboard modules
+- timeline/version modules
+- genre labels
+- contributor chips
+- round status components
+
+Important:
+audio-related components should feel premium and central.
+Do not make the player look like a throwaway utility component.
+
+Design system priorities:
+- strong hierarchy
+- readable in dark mode
+- excellent on mobile
+- consistent across public and admin
+- easy to extend later into richer discovery
+
+==================================================
+10. TYPOGRAPHY DIRECTION
+==================================================
+
+Typography is a major part of avoiding generic SaaS.
+
+Use typography that feels:
+- editorial
+- modern
+- musical
+- premium
+- legible
+
+Possible direction:
+- a strong sans-serif for interface and navigation
+- an optional secondary serif or characterful accent for editorial/music moments, if done tastefully
+
+Typography should carry:
+- confidence
+- rhythm
+- scene identity
+- seriousness
+
+Do not use overly playful fonts.
+Do not use cliché futuristic fonts.
+Do not use generic product-marketing font treatments.
+
+Text hierarchy should feel closer to:
+album credits + publication + setlist + version notes
+
+==================================================
+11. COLOR DIRECTION
+==================================================
+
+Do NOT make the platform look like another purple-blue SaaS gradient app.
+
+Create a palette that feels:
+- deep
+- textured
+- music-friendly
+- emotional
+- premium
+- stage/studio/editorial inspired
+
+Suggested direction:
+- dark neutrals as the base
+- off-black, charcoal, graphite, deep stone, muted cream for contrast
+- restrained accent colors
+- genre-aware accent options layered into the system
+
+Examples of how to think:
+Base brand = venue walls / studio equipment / liner notes / premium publication
+Accent = genre scene energy
+
+Avoid:
+- rainbow chaos
+- toy-like saturation
+- cheap neon overload
+- flat corporate blue
+- “AI purple”
+
+Important:
+genre can influence accenting, but keep the overall app coherent.
+
+==================================================
+12. IMAGERY / ART DIRECTION
+==================================================
+
+Imagery should feel like music culture, not stock startup.
+
+Use or simulate art direction inspired by:
+- album art
+- performance stills
+- studio captures
+- analog/digital music textures
+- waveform overlays used tastefully
+- track sheets / setlists / recording notes
+- poster culture
+- zines / editorial spreads
+- concert or rehearsal mood
+
+Do not use:
+- fake 3D illustrations
+- cartoon creators with laptops
+- generic abstract blobs
+- smiling office people wearing headphones
+
+Cover art and song identity should be visually central.
+Contributors and songs need to feel collectible and memorable.
+
+==================================================
+13. INTERACTION DESIGN
+==================================================
+
+Interactions should be crisp and restrained.
+
+Good interaction principles:
+- quick hover feedback
+- smooth transitions
+- subtle depth
+- tight animation timing
+- intentional reveals
+- satisfying leaderboard and timeline transitions
+
+Do not overanimate.
+Do not use gimmicks.
+Do not make it feel like a gaming UI.
+
+Audio interactions matter:
+- play states should be obvious
+- waveform/progress feedback if used should be elegant
+- active/current elements must feel alive
+
+==================================================
+14. DISCOVERY DIRECTION
+==================================================
+
+Right now, discovery should be structured around:
+- featured song
+- current round
+- genre
+- rising commits
+- latest merges
+- version history
+
+At some point, a short-form discovery layer inspired by X/Twitter/YouTube Shorts could be valuable.
+But NOT in V1 as a full social feed clone.
+
+Design for future expansion by leaving room for:
+- vertical micro-previews of songs/commits
+- swipeable or scrollable short-form discovery cards
+- short audio snippets tied to genre and round status
+- “hear what’s rising” modules
+
+Important:
+Do NOT build a social-media addiction machine right now.
+Just make sure the component system and IA could support later additions such as:
+- quick preview rails
+- short clip cards
+- trending now genre moments
+- creator spotlight snippets
+
+Think of this as:
+future lightweight discovery layer, not present-day platform identity
+
+==================================================
+15. ADMIN UX SHOULD STILL MATCH THE BRAND
+==================================================
+
+Even the admin side should not feel like generic enterprise software.
+
+It can be more functional, but it should still feel part of the same music product.
+
+Admin should feel like:
+- label control room
+- session management console
+- release/round operations panel
+
+Not:
+- a back office accounting portal
+
+Still keep it clean and usable.
+Public side gets more atmosphere.
+Admin side gets more clarity.
+But both should belong to the same world.
+
+==================================================
+16. NAVIGATION DIRECTION
+==================================================
+
+Top-level nav should prioritize:
+- songs
+- genres
+- live rounds
+- history / versions
+- credits / contributors
+- submit
+
+Potential nav structure:
+- Explore
+- Genres
+- Live
+- History
+- Contributors
+- Submit
+
+Do not bury genres.
+Do not bury the active song.
+Do not bury the current round.
+
+Mobile nav should be strong, clean, and simple.
+Avoid giant crowded hamburger menus if possible.
+
+==================================================
+17. UI COMPONENTS THAT NEED SPECIAL LOVE
+==================================================
+
+Spend extra design attention on these:
+
+1. audio player
+2. genre badge / genre nav
+3. round status card
+4. commit card
+5. leaderboard module
+6. version history timeline
+7. merged contributor credit card
+8. submission CTA section
+9. active deadline block
+10. short preview card system for future discovery
+
+These are brand-defining components.
+
+==================================================
+18. FUTURE-PROOFING FOR SHORT-FORM CONTENT
+==================================================
+
+Again: do not build a full shorts feed now.
+
+But do structure the UX so the brand can later support:
+- quick clip previews
+- fast genre discovery
+- momentum-based content surfaces
+- top snippets from commits
+- “what changed in version 3” micro clips
+- creator spotlights
+- trend-style movement without becoming cheap
+
+Future module examples:
+- “Now rising”
+- “Latest merges”
+- “Version jumps”
+- “Top 10-second moments”
+- “Genre pulse”
+
+Design the UI system so these would fit naturally later.
+
+==================================================
+19. BRAND COPY RULES
+==================================================
+
+Create interface copy that is:
+- direct
+- music-literate
+- clean
+- serious
+- inviting without sounding needy
+- human
+
+Good phrases:
+- Hear the current version
+- Submit your layer
+- Current round
+- Rising commits
+- Merged into version 2
+- Human-made only
+- Explore by genre
+- Build the track
+- Selected contributions
+- Official release path
+- What changed in this version
+
+Avoid phrases like:
+- unleash your creativity
+- next-gen creator ecosystem
+- smart collaboration suite
+- revolutionary music innovation
+- AI-powered anything
+- level up your workflow
+
+Kill all startup fluff.
+
+==================================================
+20. PERFORMANCE / FRONT-END RULES
+==================================================
+
+Because this is going on Vercel, design and build with performance discipline.
+
+Requirements:
+- image optimization
+- efficient asset loading
+- lazy loading where sensible
+- strong mobile performance
+- audio UI that does not feel bloated
+- clean responsive layouts
+- avoid animation libraries unless needed
+- avoid unnecessary front-end heaviness
+
+The site should feel fast and polished.
+Music people will bounce if it feels clunky.
+
+==================================================
+21. IMPLEMENTATION DELIVERABLES
+==================================================
+
+I want you to produce and/or implement:
+
+1. brand direction summary
+2. visual language system
+3. typography choices
+4. color palette
+5. component styling rules
+6. homepage UX direction
+7. song page UX direction
+8. genre page UX direction
+9. contributor / history / leaderboard modules
+10. mobile responsive behavior
+11. future-ready short-form preview component concepts
+12. design tokens or structured style variables if useful
+13. actual front-end implementation aligned to these rules
+
+Do not just write a style memo.
+Translate this direction into the real front-end.
+
+==================================================
+22. FINAL CREATIVE STANDARD
+==================================================
+
+When making choices, ask:
+
+Does this feel like:
+- music-first?
+- human?
+- genre-aware?
+- emotionally alive?
+- culturally credible?
+- non-generic?
+- not AI-coded?
+- not B2B-coded?
+- worth returning to?
+
+If not, redo it.
+
+The finished product should feel like a real music scene platform with structure and tension.
+Not a SaaS app wearing a leather jacket.
+
+Start by defining the brand system, homepage structure, song page structure, genre system, and core UI components.
+Then apply that direction consistently across the front-end.
